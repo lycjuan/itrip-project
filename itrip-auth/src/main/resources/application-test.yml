@@ -1,0 +1,77 @@
+#\u6307\u5B9A\u7AEF\u53E3\u53F7
+server:
+  port: 8801
+  #  \u6307\u5B9Aservlet\u4E0A\u4E0B\u6587\u8DEF\u5F84
+  servlet:
+    context-path: /auth
+spring:
+  #  \u6570\u636E\u5E93\u914D\u7F6E
+  datasource:
+    password: root
+    username: root
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/itripdb
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 172.20.0.2:8848
+        username: nacos
+        password: nacos
+  application:
+    name: itrip-auth
+  jackson:
+    date-format: yyyy-MM-dd HH:mm:ss
+    time-zone: GMT+8
+  #    \u914D\u7F6E\u90AE\u4EF6\u53D1\u9001\u57FA\u672C\u4FE1\u606F
+  mail:
+    default-encoding: utf-8
+    host: smtp.126.com
+    username: mo_168@126.com
+    password: usa911
+    protocol: smtp
+    properties.mail.smtp.auth: true
+    properties.mail.smtp.port: 994 #465\u6216\u8005994
+    properties.mail.display.sendmail: Javen
+    properties.mail.display.sendname: Spring Boot Guide Email
+    properties.mail.smtp.starttls.enable: true
+    properties.mail.smtp.starttls.required: true
+    properties.mail.smtp.ssl.enable: true
+    properties.mail.from: mo_168@126.com
+
+mybatis-plus:
+  mapper-locations: classpath:com/cskt/mapper/xml/*.xml
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+  type-aliases-package: com.cskt.entity
+  #\u903B\u8F91\u5220\u9664
+  global-config:
+    db-config:
+      # \u5168\u5C40\u903B\u8F91\u5220\u9664\u7684\u5B9E\u4F53\u5B57\u6BB5\u540D(since 3.3.0,\u914D\u7F6E\u540E\u53EF\u4EE5\u5FFD\u7565\u4E0D\u914D\u7F6E\u6B65\u9AA42)
+      logic-delete-field: isDeleted
+      # \u903B\u8F91\u5DF2\u5220\u9664\u503C(\u9ED8\u8BA4\u4E3A 1)
+      logic-delete-value: 1
+      # \u903B\u8F91\u672A\u5220\u9664\u503C(\u9ED8\u8BA4\u4E3A 0)
+      logic-not-delete-value: 0
+
+
+
+#\u81EA\u5B9A\u4E49\u90AE\u4EF6\u53CA\u77ED\u4FE1\u9A8C\u8BC1\u7801\u7684\u53D1\u9001
+email:
+  send:
+    enable: false
+
+sms:
+  send:
+    enable: true
+
+#自定义交换机、路由及队列相关信息
+mq:
+  env: local
+  exchange:
+    name: ${mq.env}:mq:exchange:itrip
+  routing:
+    key:
+      name: ${mq.env}:mq:routing:key:itrip
+  queue:
+    name: ${mq.env}:mq:queue:itrip

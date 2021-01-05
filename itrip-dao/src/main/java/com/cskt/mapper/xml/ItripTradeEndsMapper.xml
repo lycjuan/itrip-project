@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskt.mapper.ItripTradeEndsMapper">
+  <resultMap id="BaseResultMap" type="com.cskt.entity.ItripTradeEnds">
+    <!--@mbg.generated-->
+    <!--@Table itrip_trade_ends-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="order_no" jdbcType="VARCHAR" property="orderNo" />
+    <result column="flag" jdbcType="BOOLEAN" property="flag" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, order_no, flag, is_deleted
+  </sql>
+</mapper>

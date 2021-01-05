@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskt.mapper.ItripUserLinkUserMapper">
+  <resultMap id="BaseResultMap" type="com.cskt.entity.ItripUserLinkUser">
+    <!--@mbg.generated-->
+    <!--@Table itrip_user_link_user-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="link_user_name" jdbcType="VARCHAR" property="linkUserName" />
+    <result column="link_id_card" jdbcType="VARCHAR" property="linkIdCard" />
+    <result column="link_phone" jdbcType="VARCHAR" property="linkPhone" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="creation_date" jdbcType="TIMESTAMP" property="creationDate" />
+    <result column="created_by" jdbcType="BIGINT" property="createdBy" />
+    <result column="modify_date" jdbcType="TIMESTAMP" property="modifyDate" />
+    <result column="modified_by" jdbcType="BIGINT" property="modifiedBy" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
+    <result column="link_id_card_type" jdbcType="INTEGER" property="linkIdCardType" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, link_user_name, link_id_card, link_phone, user_id, creation_date, created_by, 
+    modify_date, modified_by, is_deleted, link_id_card_type
+  </sql>
+</mapper>

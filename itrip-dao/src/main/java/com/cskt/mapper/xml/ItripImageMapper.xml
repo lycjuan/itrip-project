@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskt.mapper.ItripImageMapper">
+  <resultMap id="BaseResultMap" type="com.cskt.entity.ItripImage">
+    <!--@mbg.generated-->
+    <!--@Table itrip_image-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="type" jdbcType="VARCHAR" property="type" />
+    <result column="target_id" jdbcType="BIGINT" property="targetId" />
+    <result column="position" jdbcType="INTEGER" property="position" />
+    <result column="img_url" jdbcType="VARCHAR" property="imgUrl" />
+    <result column="creation_date" jdbcType="TIMESTAMP" property="creationDate" />
+    <result column="created_by" jdbcType="BIGINT" property="createdBy" />
+    <result column="modify_date" jdbcType="TIMESTAMP" property="modifyDate" />
+    <result column="modified_by" jdbcType="BIGINT" property="modifiedBy" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, `type`, target_id, `position`, img_url, creation_date, created_by, modify_date, 
+    modified_by, is_deleted
+  </sql>
+</mapper>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.cskt.mapper.ItripHotelMapper">
+  <resultMap id="BaseResultMap" type="com.cskt.entity.ItripHotel">
+    <!--@mbg.generated-->
+    <!--@Table itrip_hotel-->
+    <id column="id" jdbcType="BIGINT" property="id" />
+    <result column="hotel_name" jdbcType="VARCHAR" property="hotelName" />
+    <result column="country_id" jdbcType="BIGINT" property="countryId" />
+    <result column="province_id" jdbcType="BIGINT" property="provinceId" />
+    <result column="city_id" jdbcType="BIGINT" property="cityId" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="details" jdbcType="LONGVARCHAR" property="details" />
+    <result column="facilities" jdbcType="LONGVARCHAR" property="facilities" />
+    <result column="hotel_policy" jdbcType="LONGVARCHAR" property="hotelPolicy" />
+    <result column="hotel_type" jdbcType="INTEGER" property="hotelType" />
+    <result column="hotel_level" jdbcType="INTEGER" property="hotelLevel" />
+    <result column="is_group_purchase" jdbcType="INTEGER" property="isGroupPurchase" />
+    <result column="redundant_city_name" jdbcType="VARCHAR" property="redundantCityName" />
+    <result column="redundant_province_name" jdbcType="VARCHAR" property="redundantProvinceName" />
+    <result column="redundant_country_name" jdbcType="VARCHAR" property="redundantCountryName" />
+    <result column="redundant_hotel_store" jdbcType="INTEGER" property="redundantHotelStore" />
+    <result column="creation_date" jdbcType="TIMESTAMP" property="creationDate" />
+    <result column="created_by" jdbcType="BIGINT" property="createdBy" />
+    <result column="modify_date" jdbcType="TIMESTAMP" property="modifyDate" />
+    <result column="modified_by" jdbcType="BIGINT" property="modifiedBy" />
+    <result column="is_deleted" jdbcType="INTEGER" property="isDeleted" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, hotel_name, country_id, province_id, city_id, address, details, facilities, hotel_policy, 
+    hotel_type, hotel_level, is_group_purchase, redundant_city_name, redundant_province_name, 
+    redundant_country_name, redundant_hotel_store, creation_date, created_by, modify_date, 
+    modified_by, is_deleted
+  </sql>
+</mapper>
